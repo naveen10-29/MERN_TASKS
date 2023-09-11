@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>task3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        a:link, a:visited ,a:hover, a:active {
-            color: blue;
+        .margin-box {
+            background-color: rgb(212, 208, 208); 
+            padding: 20px; 
+            width: 700px;
+            margin: 0;
         }
-        p{
-            border-style: solid;
-            padding: 20px 10px;
-            margin: 10% 10%;
-            background-color: lightgray;
+        .code-box {
+            border: 1px solid #000; 
+            padding: 10px;
+        }
+        .blue-underline {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .blue-underline-bg {
+            color: blue;
+            text-decoration: underline;
+            background-color: rgb(244, 241, 241);
         }
     </style>
-    
 </head>
 <body>
-    <p>
-        Click any of the following links<br/>
-        <a href="https://www.myntra.com/" target="_blank">Opens in New</a> |
-        <a href="https://www.flipkart.com/" target="_self">Opens in Self</a> |
-        <a href="https://www.amazon.in/" target="_parent">Opens in Parent</a> |
-        <a href="https://www.cricbuzz.com/" target="_top">Opens in Body</a> |
-        <a href="mailto:pvnsmaruthikumar@gmail.com" >Send email</a>
-    </p>
+    <div class="margin-box code-box">
+        <p>Click any of the following links</p>
+
+        <span class="blue-underline">Opens in New</span>
+        <span> | </span>
+        <span class="blue-underline">Opens in Self</span>
+        <span> | </span>
+        <span class="blue-underline">Opens in Parent</span>
+        <span> | </span>
+        <span class="blue-underline">Opens in Body</span>
+        <span> | </span>
+        <span class="blue-underline-bg">Send email</span>
+    </div>
 </body>
 </html>
