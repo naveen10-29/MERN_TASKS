@@ -1,64 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS_task5</title>
+    <title>CSS Task</title>
     <style>
-        .page{
-            background-color: yellow;
-            margin: 5% 5% 5% 5%;
-            border-style: solid;
-            font-family: Georgia, 'Times New Roman', Times, serif;       
+        body {
+            background-color: rgb(157, 6, 82); 
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
         }
-        .nav a{
-            text-decoration: none;
-            color: blue;
+
+        form {
+            background-color: rgb(73, 2, 38); 
+            padding: 20px;
+            box-sizing: border-box;
+            width: 800px;
+            margin: 0 auto;
         }
-        .nav{
-            position: absolute;
-           list-style-type: none; 
-           padding: 0;
-           margin: 0;
-           top: 20%;
-           left: 15%;
-           width: 20%;
+
+        label {
+            text-align: right;
+            width: 120px;
+            display: inline-block;
+            margin-right: 10px;
+            color: white;
         }
-        .nav li{
-            background-color: white;
-            margin: 5%;
-            padding: 3%;
-            border-right: 1em solid black;
+
+        h1 {
+            text-align: center;
+            color: white;
         }
-        .second{
-            padding-left: 40%;
-            padding-right: 5%;
-            color: purple;
-            padding-bottom: 20%;
+
+        table {
+            width: 100%;
         }
-        p.c{
-            font-family: cursive;
-            margin-top: 1em;
-            padding-top: 1em;
-            border-top: thin dotted;
+
+        table tr {
+            margin: 50px;
         }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 50%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .gender-checkboxes {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Vertically align items */
+        }
+
+        .gender-checkboxes label {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        /* Updated button styles */
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: white; /* Change button background color to white */
+            color: black; /* Change button text color to black */
+            padding: 20px 0;
+            margin-left: -20%;
+            border: none;
+            width: 100%; /* Make the button cover the entire width */
+            cursor: pointer;
+            font-size: 24px; /* Increase font size for better visibility */
+            font-weight: bold; /* Make the font bold */
+            border-radius: 10px; /* Add rounded corners */
+        }
+
     </style>
 </head>
 <body>
-    <div class="page">
-        <ul class="nav">
-            <li><a href="#">Home page</a></li>
-            <li><a href="#">Musings</a></li>
-            <li><a href="#">My town</a></li>
-            <li><a href="#">Links</a></li>
-        </ul>
-        <div class="second">
-            <h1>My first styled page</h1>
-            <p>Welcome to my styled page!</p>
-            <p>It lacks images,but at least it has style.And it has links,even if they dont go anywhere...</p>
-            <p>There should be more here,but I don't know what yet.</p>
-            <p class="c">Made 5 April 2004<br>by myself.</p>
-        </div>
-    </div>
+    <h1>Registration Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Your name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="Your email"></td>
+            </tr>
+            <tr>
+                <td><label for="pw">Password:</label></td>
+                <td><input type="password" id="pw" name="pw" required></td>
+            </tr>
+            <tr>
+                <td><label for="pn">Phone Number:</label></td>
+                <td><input type="text" id="pn" name="pn" required></td>
+            </tr>
+            <tr class="gender-row">
+                <td><label>Gender:</label></td>
+                <td class="gender-checkboxes">
+                    <label><input type="checkbox" name="gender" value="Male"> Male</label>
+                    <label><input type="checkbox" name="gender" value="Female"> Female</label>
+                    <label><input type="checkbox" name="gender" value="Other"> Other</label>
+                </td>
+            </tr>                      
+            <tr>
+                <td><label for="lan">Language:</label></td>
+                <td>
+                    <select name="lan" id="lan">
+                        <option value="selected" selected>Select language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zip Code:</label></td>
+                <td><input type="text" id="zip" name="zip" required></td>
+            </tr>
+            <tr>
+                <td><label for="about">About:</label></td>
+                <td><textarea id="about" name="about" placeholder="Write about yourself"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
